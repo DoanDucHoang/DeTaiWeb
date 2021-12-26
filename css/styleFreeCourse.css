@@ -1,0 +1,228 @@
+html{
+    background-color: blanchedalmond;
+}
+
+.header{
+    background: white;
+}
+
+.homefreecourse{
+    padding-top: 150px;
+    padding-bottom: 50px;
+    min-height: 100px;
+    background: url(../images/freecourse-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: aliceblue;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.homefreecourse::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.content h1{
+    font-size: 2.4rem;
+    position: relative;
+}
+
+.content h1 span{
+    animation: pulse 7s linear infinite;
+    font-size: 3rem;
+}
+
+@keyframes pulse {
+    0%{
+        color: rgb(164, 192, 37);
+    }
+    10%{
+        color: rgb(221, 15, 0);
+    }
+    20%{
+        color: rgb(12, 199, 127);
+    }
+    30%{
+        color: rgb(4, 37, 145);
+    }
+    40%{
+        color: rgb(135, 14, 139);
+    }
+    50%{
+        color: rgb(167, 1, 50);
+    }
+    60%{
+        color: rgb(184, 83, 83);
+    }
+    70%{
+        color: rgb(54, 152, 182);
+    }
+    80%{
+        color: rgb(67, 6, 117);
+    }
+    90%{
+        color: rgb(3, 199, 29);
+    }
+    100%{
+        color: rgb(19, 154, 163);
+    }
+}
+
+.contentfreecourse{
+    background: #fff;
+}
+
+.container-fluid{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.contentfreecourse .container-fluid .row{
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.list-courses .title h1{
+    font-size: 3rem;
+    font-weight: 500;
+    text-align: left;
+}
+
+.container-fluid .card{
+    width: 300px;
+    position: relative;
+    border: none;
+    padding: 0;
+    padding: 20px;
+}
+
+.container-fluid .card .badge{
+    position: absolute;
+}
+
+.container-fluid .card .badge span{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    top: -5px;
+    left: -5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-fluid .card .badge span::before{
+    content: 'hot';
+    position: absolute;
+    width: 150%;
+    height: 25px;
+    background: red;
+    transform: rotate(-45deg) translateY(-20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.container-fluid .card .product-img img{
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0 15% 0 0;
+}
+
+.container-fluid .card .product-detail{
+    width: 100%;
+    background: #21222d;
+    color: #fff;
+    border-radius: 0 0 15% 15%;
+    padding: 0.8rem;
+}
+
+.container-fluid .card .product-detail span{
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+.container-fluid .card .product-detail .rating{
+    color: yellow;
+    user-select: none;
+}
+
+.container-fluid .card .product-detail .buttons{
+    height: 65px ;
+    margin-top: 15px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+
+.container-fluid .card .product-detail .buttons .price{
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.container-fluid .card .product-detail .buttons button{
+    position: relative;
+    border: none;
+    outline: none;
+    background: #35353f;
+    color: #fff;
+    height: 40px;
+    border-radius: 50px;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.container-fluid .card .product-detail .buttons .detail-btn{
+    width: 160px;
+    text-transform: capitalize;
+}
+
+.container-fluid .card .product-detail .buttons .favourite-btn{
+    width: 40px;
+    border-radius: 50%;
+    color: white;
+}
+
+.container-fluid .card .product-detail .buttons button::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #35353f;
+    height: 45px;
+    transition: 0.3s;
+}
+
+.container-fluid .card .product-detail .buttons .detail-btn::before{
+    width: 165px;
+    border-radius: 50px;
+}   
+
+.container-fluid .card .product-detail .buttons .favourite-btn::before{
+    width: 45px;
+    border-radius: 50%;
+}
+
+
+.container-fluid .card .product-detail .buttons button:hover::before{
+    border-color: #fff;
+}
+
+@media (max-width: 634px){
+    .container-fluid .card{
+        width: 100%;
+    }
+}

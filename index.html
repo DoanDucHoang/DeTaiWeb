@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOANG-Online Course-learn to code</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="icon" type="image/png" sizes="16x16"  href="images/faviconH.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+
+    <!-- login form start-->
+    <div id="loginform" class="modal">
+  
+        <form class="modal-content animate" action="">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('loginform').style.display='none'" class="close" title="Close Modal">&times;</span>
+          </div>
+      
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+      
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+              
+            <button type="submit" class="loginbtn">Login</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+      
+          <div class="container">
+            <button type="button" onclick="document.getElementById('loginform').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+            <a href="#" onclick="document.getElementById('signupform').style.display='block'" style="width:auto;" ><span class="signup">sign up</span></a>
+          </div>
+        </form>
+      </div>
+      <!-- login form ends-->
+
+      <!-- signup form start-->
+    <div id="signupform" class="modal">
+  
+        <form class="modal-content animate" action="" name="signupform" onsubmit="return validateForm()"> 
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('signupform').style.display='none'" class="close" title="Close Modal">&times;</span>
+          </div>
+      
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+      
+            <label for="uremail"><b>Your email</b></label>
+            <input type="email" placeholder="Enter Your Email" name="uremail" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+            
+            <label for="rtpsw"><b>Repeat Password</b></label>
+            <input type="password" placeholder="Repeat Password" name="rtpsw" required>
+
+            <button type="submit" class="loginbtn">sign up</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> agree to our Terms & Privacy
+            </label>
+          </div>
+      
+          <div class="container">
+            <button type="button" onclick="document.getElementById('signupform').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="account">Do you have an account? <a href="#" onclick="document.getElementById('signupform').style.display='none'">log in</a></span>
+          </div>
+        </form>
+      </div>
+    
+      <!-- signup form ends-->
+    
+    <!-- Header starts -->
+    <header class="header" id="navbar">
+        
+        <a href="index.html" class="logo" >
+            <img src="images/logohoang.png" alt="">
+        </a>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home" class="active">home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#protfolio">portfolio</a></li>
+                <li><a href="freeCourse.html">free course</a></li>
+                <li><a href="#service">service</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="icon">
+            <div class="fas fa-search" id="search-btn"></div>
+            <button class="login" onclick="document.getElementById('loginform').style.display='block'" style="width:auto;">login</button>
+            <div class="fas fa-bars" id="menu-btn"></div>  
+        </div>
+
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="search here">
+            <label for="search-box" class="fas fa-search" id="search-btn"></label>
+        </div>
+    </header>
+    <!-- Header ends -->
+
+    <!-- Home starts -->
+    <section class="home" id="home">
+        <div class="content">
+            <h3 class="title">Programming for a better life</h3>
+            <p class="text"><i>“Any fool can write code that a computer can understand. Good programmers write code that humans can understand.”</i>– Martin Fowler</p>
+            <a href="freeCourse.html"><button type="button" class="btn btn-outline-warning">get yours now</button></a>
+        </div>
+    </section>
+    <!-- Home ends -->
+
+    <!-- About start -->
+    <section class="about" id="about">
+        <h1 class="heading"><span>about</span> us</h1>
+        <div class="row">
+            <div class="image">
+                <img src="images/chia-khoa-lap-trinh.png" alt="">
+            </div>
+            <div class="content">
+                <h3>What Makes <span>Hoang</span> Special?</h3>
+                <div class="icon"><i class="fa fa-users"></i></div>
+                <p>Experienced teaching staff with more than 15 years of teaching experience in the profession, from all over the world</p>
+                <div class="icon"><i class="fas fa-laptop"></i></div>
+                <p><span>HOANG</span> is an online interactive platform and system that allows users to learn, practice and evaluate their programming skills through practice exercises, coding contests with automatic grading function for users Use can improve skills and increase productivity.</p>
+                <div class="icon"><i class="fa fa-adjust"></i></div>
+                <p>We focus on developing a comprehensive ecosystem with beginner to advanced courses and practice challenges suitable for everyone. With a wide variety of courses and challenges that support many different programming languages, <span>HOANG</span> help users learn and practice programming easily and efficiently. We connect all those who share the same passion for the field of computer science, then together build a strong community</p>
+                <a href="freeCourse.html"><button type="button" class="btn btn-warning">learn now</button></a>
+            </div>
+        </div>
+    </section>
+    <!-- About ends -->
+
+    <!-- Protfolio start -->
+    <section class="protfolio" id="protfolio">
+        <h1 class="protfolio">portfolio</h1>
+
+        <div class="counter-up">
+            <div class="content">
+                <div class="box col-xs-12 col-md-4">
+                    <div class="icon"><i class="fa fa-users"></i></div>
+                    <div class="counter" id="counter" data-target="5420"></div>
+                    <div class="text">students</div>
+                </div>
+
+                <div class="box col-xs-12 col-md-4">
+                    <div class="icon"><i class="fas fa-user-graduate"></i></div>
+                    <div class="counter" id="counter" data-target="2760"></div>
+                    <div class="text">certificates</div>
+                </div>
+
+                <div class="box col-xs-12 col-md-4">
+                    <div class="icon"><i class="fas fa-globe"></i></div>
+                    <div class="counter" id="counter" data-target="63"></div>
+                    <div class="text">province </div>
+                </div>
+                <div class="btn col-lg-12" style="text-align:center">
+                    <button type="button" class="btn btn-warning" onclick="update()">click for details</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="reviews">
+            <div class="container">
+                <h2 class="comment">What our students say...</h2>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner" >
+                                <div class="carousel-item active">
+                                  <div class="row">
+                                      <div class="col-md-12">
+                                          <div class="box">
+                                              <div class="img-area"><img src="images/94368654_891975861227270_2122789419999035392_n.jpg" alt="..."></div>
+                                              <div class="img-text">
+                                                  <h2>Doan Duc Hoang</h2>
+                                                  <h3>Developer</h3>
+                                                  <p>"I will never forget the time when I received the graduation certificate from HOANG and the opportunity to work at FPT Corporation at the age of 17. I'm a little proud and feel like an adult."</p>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="box">
+                                                <div class="img-area"><img src="images/avatar1.jpg" alt="..."></div>
+                                                <div class="img-text">
+                                                    <h2>Doan Duc Trong</h2>
+                                                    <h3>Developer</h3>
+                                                    <p>“Studying IT online at HOANG does not require much academic and academic knowledge, the training program is quite close to reality and the study time is flexible, so that I can study and work better at the same time.”</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="box">
+                                                <div class="img-area"><img src="images/avatar2.jpg" alt="..."></div>
+                                                <div class="img-text">
+                                                    <h2>Doan Duc Huy</h2>
+                                                    <h3>Developer</h3>
+                                                    <p>“At HOANG, the biggest advantage for learners like me is guaranteed output. I was supported by HOANG from A to Z to practice and find the job I wanted”</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+    </section>
+
+    
+
+    <!-- Protfolio ends -->
+
+    <!-- Service start -->
+
+    <section class="service" id="service">
+        <h1 class="heading">service</h1>
+
+        <div class="content">
+            <div class="row">
+                <div class="card-service col-md-4 col-sm-6 px-2">
+                    <i class="fas fa-desktop"></i>
+                    <a href="serviceWeb.html"><h2>web developer</h2></a> 
+                    <p>learn website design in HTML, CSS, Javascript, backend programming learn php, python, java, SQL, ... after completing the course students can design web for companies, freelancers,... </p>
+                    
+                </div>
+
+                <div class="card-service col-md-4 col-sm-6 px-2">
+                    <i class="fas fa-mobile-alt"></i>
+                    <a href="mobileservice.html"><h2>mobile developer</h2></a> 
+                    <p>Learn data structures, object-oriented programming, Java programming, mobile programming, game development. After this certificate, students have the ability to create mobile applications and games, join companies providing software development services for mobile apps.</p>
+                    
+                </div>
+
+                <div class="card-service col-md-4 col-sm-12 px-2">
+                    <i class="fas fa-palette"></i>
+                    <a href="designservice.html"><h2>design</h2></a> 
+                    <p>students are equipped with knowledge and skills on the background of art and design methods, Graduates are able to combine design with media, fine art and commerce to meet the requirements of modern entertainment and creative industries.</p>
+                    
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="card-service col-md-4 col-sm-6 px-2">
+                    <i class="fas fa-bezier-curve"></i>
+                    <a href="datascientistservice.html"><h2>data scientist</h2></a> 
+                    <p>Learn advanced math, python, statistical probabilities, collect, sort and visualize data, deep learning, machine learning,... After completing the course, students can become data analysis engineers for companies domestic and foreign companies</p>
+                    
+                </div>
+
+                <div class="card-service col-md-4 col-sm-6 px-2">
+                    <i class="fas fa-laptop-code"></i>
+                    <a href="computerscientist.html"><h2>computer scientist</h2></a> 
+                    <p>learn how to communicate with computers using data, images, videos, voices, AI, creating robots,... after completing the course students can become computer scientists, designing computers AI capabilities for devices.</p>
+                    
+                </div>
+
+                <div class="card-service col-md-4 col-sm-12 px-2">
+                    <i class="fas fa-memory"></i>
+                    <a href="embeddedhardware.html"><h2>embedded hardware</h2></a> 
+                    <p>learn PCB design, test board, solder circuit repair, ... Because this is an industry in the group of electronics and communication, after completing the course you will become an expert in working with hardware. </p>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Service ends -->
+
+    <!-- Contact start -->
+
+    <section class="contact" id="contact">
+        <h1 class="heading">contact</h1>
+        <div class="row">
+
+
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.95434200654!2d106.67564341534735!3d10.73800246283675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f62a90e5dbd%3A0x674d5126513db295!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgU8OgaSBHw7Ju!5e0!3m2!1svi!2s!4v1640229391185!5m2!1svi!2s" allowfullscreen="" loading="lazy"></iframe>
+
+            <form action="php/contact.php" method="POST" enctype="multipart/form-data">
+                <h3>contact us</h3>
+                <div class="inputbox">
+                    <span class="fas fa-user"></span>
+                    <input type="text" placeholder="your name" name="name" required>
+                </div>
+
+                <div class="inputbox">
+                    <span class="fas fa-envelope"></span>
+                    <input type="email" placeholder="your email" name="email" required>
+                </div>
+                <div class="inputbox">
+                    <span class="fas fa-phone"></span>
+                    <input type="number" placeholder="your phone" name="number" required>
+                </div>
+                <div class="inputbox">
+                    <span class="fas fa-comment"></span>
+                    <textarea cols="96" rows="5" placeholder="your message" name="message"></textarea>
+                </div>
+                <input type="submit" value="contact now" class="btn btn-warning col-lg-12">
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact ends -->
+
+    <!-- Footer start -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col col-lg-3 col-sm-6">
+                    <h2>contact info</h2>
+                    <ul>
+                        <li> <i class="fas fa-map-marker-alt"></i> <p>180 Đ. Cao Lỗ, Phường 4, Quận 8, <br>  Thành phố Hồ Chí Minh, Việt Nam</p></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:0901089593"> <p>tel: 0901089593</p> </a></li>
+                        <li><i class="fas fa-envelope"></i><a href="mailto:DH51902682@student.stu.edu.vn">DH51902681@student.stu.edu.vn</a></li>
+                        <li><p>Đoàn Đức Hoàng <br> DH51902681</p> </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col col-lg-3 col-sm-6">
+                    <h2>course links</h2>
+                    <ul>
+                        <li><a href="freeCourse.html">free course</a></li>
+                        <li><a href="#service">service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col col-lg-3 col-sm-6">
+                    <h2>contract links</h2>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Terms & Consitions</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col col-lg-3 col-sm-6">
+                    <h2>follow us</h2>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=100012445936693"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://studio.youtube.com/channel/UCje9km_aJEeHg0g40ogNaig/videos/upload?filter=%5B%5D&sort=%7B%22columnType%22%3A%22date%22%2C%22sortOrder%22%3A%22DESCENDING%22%7D"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com/@usersfjwjm1uee?lang=vi-VN"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.instagram.com/kien4438/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer ends -->
+    <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+<!-- <div class="footer-col">
+                    <h2>Contact info</h2>
+                    <ul>
+                        <li>
+                            <span><i class="fas fa-map-marker-alt"></i></span>
+                            <span>135A Điện Biên Phủ, DaKao, Quận 1 <br>
+                            Thành Phố Hồ Chí Minh</span>
+                        </li>
+                        <li>
+                            <span><i class="fas fa-phone"></i></span>
+                            <p><a href="tel:0901089593"> tel: 0901089593</a></p>
+                        </li>
+                        <li>
+                            <span><i class="fas fa-envelope"></i></span>
+                            <p><a href="mailto:DH51902682@student.stu.edu.vn">DH51902681@student.stu.edu.vn</a></p>
+                            <p><a href="mailto:doanduckien.2001@gmail.com">doanduckien.2001@gmail.com</a></p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h2>course links</h2>
+                    <ul>
+                        <li><a href="#">free course</a></li>
+                        <li><a href="#">service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h2>contract links</h2>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Terms & Consitions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h2>follow us</h2>
+                    <div class="social-link">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div> -->

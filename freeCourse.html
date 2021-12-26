@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOANG-Free Course</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styleFreeCourse.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="icon" type="image/png" sizes="16x16"  href="images/faviconH.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+
+    <!-- login form start-->
+    <div id="loginform" class="modal">
+  
+        <form class="modal-content animate" action="">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('loginform').style.display='none'" class="close" title="Close Modal">&times;</span>
+          </div>
+      
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+      
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+              
+            <button type="submit" class="loginbtn">Login</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+      
+          <div class="container">
+            <button type="button" onclick="document.getElementById('loginform').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+            <a href="#" onclick="document.getElementById('signupform').style.display='block'" style="width:auto;" ><span class="signup">sign up</span></a>
+          </div>
+        </form>
+      </div>
+      <!-- login form ends-->
+
+      <!-- signup form start-->
+    <div id="signupform" class="modal">
+  
+        <form class="modal-content animate" action="" name="signupform" onsubmit="return validateForm()"> 
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('signupform').style.display='none'" class="close" title="Close Modal">&times;</span>
+          </div>
+      
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+      
+            <label for="uremail"><b>Your email</b></label>
+            <input type="email" placeholder="Enter Your Email" name="uremail" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+            
+            <label for="rtpsw"><b>Repeat Password</b></label>
+            <input type="password" placeholder="Repeat Password" name="rtpsw" required>
+
+            <button type="submit" class="loginbtn">sign up</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> agree to our Terms & Privacy
+            </label>
+          </div>
+      
+          <div class="container">
+            <button type="button" onclick="document.getElementById('signupform').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="account">Do you have an account? <a href="#" onclick="document.getElementById('signupform').style.display='none'">log in</a></span>
+          </div>
+        </form>
+      </div>
+    
+      <!-- signup form ends-->
+
+    <!-- Header starts -->
+    <header class="header">
+        
+        <a href="index.html" class="logo" >
+            <img src="images/logohoang.png" alt="">
+        </a>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="index.html#about">about</a></li>
+                <li><a href="index.html#protfolio">portfolio</a></li>
+                <li><a href="freeCourse.html" class="active">free course</a></li>
+                <li><a href="index.html#service">service</a></li>
+                <li><a href="index.html#contact">contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="icon">
+            <div class="fas fa-search" id="search-btn"></div>
+            <button class="login" onclick="document.getElementById('loginform').style.display='block'" style="width:auto;">login</button>
+            <div class="fas fa-bars" id="menu-btn"></div>  
+        </div>
+
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="search here">
+            <label for="search-box" class="fas fa-search" id="search-btn"></label>
+        </div>
+    </header>
+    <!-- Header ends -->
+
+    <!-- HomeFreeCourse start -->
+    <section class="homefreecourse">  
+        <div class="content">
+            <h1>Learning code online, Let's start with your <span>free</span> course</h1>
+        </div>
+    </section>
+    <!-- HomeFreeCourse ends -->
+
+    <!-- ContentFreeCourse start -->
+
+    <section class="contentfreecourse">
+        <div class="container-fluid">
+            <div class="list">
+                <div class="list-courses">
+                    <div class="title"><h1>Basic knowledge</h1></div>
+                        <div class="row">
+                        <div class="card col-md-4">
+                            <div class="badge"><span></span></div>
+                            <div class="product-img"><img src="images/c++-bg.jpg" alt=""></div>
+                            <div class="product-detail">
+                                <div class="title-course">
+                                    <h3>OOP in C++</h3>
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span>online</span> <br>
+                                <span>Doan Duc Hoang</span>
+                                <div class="buttons">
+                                    <div class="price">Free</div>
+                                    <button class="detail-btn">study now</button>
+                                    <button class="favourite-btn" id="favourite-btn1" onclick="toggle1()"><i class="far fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-md-4">
+                            <div class="badge"><span></span></div>
+                            <div class="product-img"><img src="images/software-bg.png" alt=""></div>
+                            <div class="product-detail">
+                                <div class="title-course">
+                                    <h3>Computer Software</h3>
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span>online</span> <br>
+                                <span>Doan Duc Hoang</span>
+                                <div class="buttons">
+                                    <div class="price">Free</div>
+                                    <button class="detail-btn">study now</button>
+                                    <button class="favourite-btn" id="favourite-btn2" onclick="toggle2()"><i class="far fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-md-4">
+                            <div class="product-img"><img src="images/hardware-bg.png" alt=""></div>
+                            <div class="product-detail">
+                                <div class="title-course">
+                                    <h3>Computer Hardware</h3>
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span>online</span> <br>
+                                <span>Doan Duc Hoang</span>
+                                <div class="buttons">
+                                    <div class="price">Free</div>
+                                    <button class="detail-btn">study now</button>
+                                    <button class="favourite-btn" id="favourite-btn3" onclick="toggle3()"><i class="far fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-md-4">
+                            <div class="product-img"><img src="images/computerNetwork-bg.png" alt=""></div>
+                            <div class="product-detail">
+                                <div class="title-course">
+                                    <h3>Computer Network</h3>
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span>online</span> <br>
+                                <span>Doan Duc Hoang</span>
+                                <div class="buttons">
+                                    <div class="price">Free</div>
+                                    <button class="detail-btn">study now</button>
+                                    <button class="favourite-btn" id="favourite-btn4" onclick="toggle4()"><i class="far fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                </div>
+                <div class="list-courses">
+                    <div class="title"><h1>Basic programming</h1></div>
+                        <div class="row">
+                        <div class="card col-md-4">
+                            <div class="badge"><span></span></div>
+                            <div class="product-img"><img src="images/c-bg.jpg" alt=""></div>
+                            <div class="product-detail">
+                                <div class="title-course">
+                                    <h3>C for Beginners</h3>
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span>online</span> <br>
+                                <span>Doan Duc Hoang</span>
+                                <div class="buttons">
+                                    <div class="price">Free</div>
+                                    <button class="detail-btn">study now</button>
+                                    <button class="favourite-btn" id="favourite-btn5" onclick="toggle5()"><i class="far fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-md-4">
+                            <div class="badge"><span></span></div>
+                            <div class="product-img"><img src="images/c++beginners-bg.jpg" alt=""></div>
+                            <div class="product-detail">
+                                <div class="title-course">
+                                    <h3>C++ for beginners</h3>
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span>online</span> <br>
+                                <span>Doan Duc Hoang</span>
+                                <div class="buttons">
+                                    <div class="price">Free</div>
+                                    <button class="detail-btn">study now</button>
+                                    <button class="favourite-btn" id="favourite-btn6" onclick="toggle6()"><i class="far fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-md-4">
+                            <div class="badge"><span></span></div>
+                            <div class="product-img"><img src="images/sql-bg.jpg" alt=""></div>
+                            <div class="product-detail">
+                                <div class="title-course">
+                                    <h3>SQL for beginners</h3>
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span>online</span> <br>
+                                <span>Doan Duc Hoang</span>
+                                <div class="buttons">
+                                    <div class="price">Free</div>
+                                    <button class="detail-btn">study now</button>
+                                    <button class="favourite-btn" id="favourite-btn7" onclick="toggle7()"><i class="far fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-md-4">
+                            <div class="product-img"><img src="images/js-bg.jpg" alt=""></div>
+                            <div class="product-detail">
+                                <div class="title-course">
+                                    <h3>JavaScript for beginners</h3>
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span>online</span> <br>
+                                <span>Doan Duc Hoang</span>
+                                <div class="buttons">
+                                    <div class="price">Free</div>
+                                    <button class="detail-btn">study now</button>
+                                    <button class="favourite-btn" id="favourite-btn8" onclick="toggle8()"><i class="far fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="card col-md-4">
+                            <div class="product-img"><img src="images/py-bg.jpg" alt=""></div>
+                            <div class="product-detail">
+                                <div class="title-course">
+                                    <h3>Python for beginners</h3>
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span>online</span> <br>
+                                <span>Doan Duc Hoang</span>
+                                <div class="buttons">
+                                    <div class="price">Free</div>
+                                    <button class="detail-btn">study now</button>
+                                    <button class="favourite-btn" id="favourite-btn9" onclick="toggle9()"><i class="far fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card col-md-4">
+                            <div class="product-img"><img src="images/java-bg.jpg" alt=""></div>
+                            <div class="product-detail">
+                                <div class="title-course">
+                                    <h3>java for beginners</h3>
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span>online</span> <br>
+                                <span>Doan Duc Hoang</span>
+                                <div class="buttons">
+                                    <div class="price">Free</div>
+                                    <button class="detail-btn">study now</button>
+                                    <button class="favourite-btn" id="favourite-btn10" onclick="toggle10()"><i class="far fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ContentFreeCourse ends -->
+    <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>

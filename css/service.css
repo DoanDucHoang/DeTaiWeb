@@ -1,0 +1,183 @@
+html{
+    background-color: blanchedalmond;
+}
+
+.header{
+    background: white;
+}
+
+.homefreecourse{
+    padding-top: 150px;
+    padding-bottom: 50px;
+    min-height: 100px;
+    background: url(../images/freecourse-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: aliceblue;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.homefreecourse::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.content h1{
+    font-size: 2.4rem;
+    position: relative;
+}
+
+.content p{
+    font-size: 1.2rem;
+    position: relative;
+}
+
+ol.breadcrumb{
+    padding: 5px;
+    list-style: none;
+    background-color: #eee;
+    position: relative;
+}
+
+ol.breadcrumb li{
+    display: inline;
+    font-size: 15px;
+    color: #000;
+}
+
+ol.breadcrumb li+li:before{
+    padding: 8px;
+    color: #000;
+    content: ">\00a0";
+}
+
+ol.breadcrumb li a:hover{
+    text-decoration: underline;
+}
+
+.breadcrumb li a{
+    text-decoration: none;
+    color: #000;
+}
+
+.subject-summary{
+    position: relative;
+}
+
+.detail-left{
+    display: flex;
+    font-size: 2rem;
+}
+
+.detail-left .subject-info{
+    padding: 20px;
+    text-align: center;
+}
+
+.detail-left .subject-info span i{
+    padding-right: 5px;
+}
+
+.detail-right{
+    background: #fff;
+    border-radius: 40px;
+    color: #000;
+    text-align: center;
+    height: auto;
+    padding-bottom: 15px;
+}
+
+.subject-summary{
+    padding: 15px;
+    height: 200px;
+}
+
+.subject-summary button{
+    width: 150px;
+    height: 40px;
+    font-size: 20px;
+    background: blue;
+    color: #fff;
+    border-radius: 5px;
+    padding: 0 30px;
+}
+
+.subject-summary form button:hover{
+    background: #fff;
+    color: blue;
+    border: 1px solid;
+}
+
+.subject-summary-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    color: #6c757d;
+}
+
+.subject-summary-list li i{
+    padding: 10px;
+
+}
+
+.subject-summary-list-1{
+    display: block;
+    font-size: 15px;
+}
+
+.subject-summary-content h5{
+    text-align: left;
+    font-size: 16px;
+    color: #6c757d;
+}
+
+.subject-summary-list-1 li{
+    padding: 1px;
+    text-align: left;
+
+}
+
+.content{
+    position: relative;
+    padding: 80px 50px 40px;
+}
+
+.content h2{
+    color: #fff;
+    font-size: 40px;
+}
+
+.subjectlist li{
+    font-size: 30px;
+    color: #fff;
+}
+
+@media (max-width:768px){
+    .subject-summary-content li{
+        font-size: 70%;
+    }
+
+    .subject-summary-content h5{
+        font-size: 100%;
+    }
+
+    .content{
+        width: 100%;
+    }
+
+    .content h2{
+        font-size: 20px;
+    }
+
+    .content li{
+        font-size: 15px;
+    }
+}
+
